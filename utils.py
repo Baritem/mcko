@@ -1,4 +1,9 @@
 def read_data(path):
+    """
+    Чтение данных из файла
+    :param path: Путь к файлу
+    :return: Заголовки столбцов, Данные в виде списка, данные в виде словаря
+    """
     try:
         lst = []
         data = dict()
@@ -16,7 +21,13 @@ def read_data(path):
         return None
 
 def dump(data, path):
-    with open("scientist_origin.txt", "w", encoding="utf-8") as f:
+    """
+    Сохраняет данные в файл
+    :param data: Данные для сохранения
+    :param path: Путь к файлу для сохранения
+    :return: None
+    """
+    with open(path, "w", encoding="utf-8") as f:
         for line in data:
             s = ""
             for item in line:
