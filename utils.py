@@ -20,7 +20,8 @@ def read_data(path):
         print(e)
         return None
 
-def dump(data, path):
+
+def dump(data, path, sep="#"):
     """
     Сохраняет данные в файл
     :param data: Данные для сохранения
@@ -31,6 +32,6 @@ def dump(data, path):
         for line in data:
             s = ""
             for item in line:
-                s += str(item) + "#"
+                s += str(item) + sep
             s = s[:-1] + "\n"
             f.write(s)
